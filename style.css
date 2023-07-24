@@ -46,23 +46,15 @@ body {
 
 .black-bgc {
     position: fixed;
+    display: none;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
-.burger-menu_close {
-    width: 50px;
-    margin-bottom: 30px;
-    cursor: pointer;
-}
-
-.burger-menu_close :hover {
-    opacity: 75%;
-}
-
 .burger-menu {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -71,6 +63,18 @@ body {
     padding: 30px 16px;
     background-color: rgba(65, 58, 108, 1);
     z-index: 2;
+}
+
+.burger-menu_close {
+    width: 50px;
+    margin-bottom: 30px;
+    margin-left: 14px;
+    cursor: pointer;
+}
+
+.burger-menu_close :hover {
+    opacity: 75%;
+    /* transform: rotate(360deg);              не працює */
 }
 
 .burger-menu__list a {
@@ -82,6 +86,10 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
+}
+
+.burger-menu__list li :hover {
+    opacity: 75%;
 }
 
 /* burger menu end */
